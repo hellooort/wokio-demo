@@ -883,6 +883,22 @@
   line-height: 1.7;
 }
 
+/* Store franchise link */
+.store-franchise {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.store-franchise:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
 /* Sub page header always scrolled */
 body.sub-page #header {
   background: rgba(253, 251, 248, 0.95);
