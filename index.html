@@ -6,17 +6,16 @@
   <title>WOKIO - 수제화의 새로운 기준</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header / Navigation -->
+  <!-- Header -->
   <header id="header">
     <div class="header-inner">
       <a href="index.html" class="logo">WOKIO</a>
       <nav class="gnb">
         <ul class="gnb-list">
-          <li class="gnb-item has-sub">
-            <a href="#">워키오</a>
+          <li class="gnb-item has-sub"><a href="#">워키오</a>
             <ul class="sub-menu">
               <li><a href="about/greeting.html">인사말</a></li>
               <li><a href="about/story.html">브랜드 스토리</a></li>
@@ -24,8 +23,7 @@
               <li><a href="about/ambassador.html">워키오 앰버서더</a></li>
             </ul>
           </li>
-          <li class="gnb-item has-sub">
-            <a href="#">발 건강 연구소</a>
+          <li class="gnb-item has-sub"><a href="#">발 건강 연구소</a>
             <ul class="sub-menu">
               <li><a href="lab/mywokio.html">나만의 워키오</a></li>
               <li><a href="lab/modifigio.html">모디피지오 활용</a></li>
@@ -34,22 +32,19 @@
               <li><a href="lab/patent.html">특허</a></li>
             </ul>
           </li>
-          <li class="gnb-item has-sub">
-            <a href="products/index.html">제품안내</a>
+          <li class="gnb-item has-sub"><a href="products/index.html">제품안내</a>
             <ul class="sub-menu">
               <li><a href="products/index.html">전체 제품</a></li>
             </ul>
           </li>
-          <li class="gnb-item has-sub">
-            <a href="#">매장안내</a>
+          <li class="gnb-item has-sub"><a href="#">매장안내</a>
             <ul class="sub-menu">
               <li><a href="store/index.html">매장 안내</a></li>
               <li><a href="store/manager.html">점장 소개</a></li>
               <li><a href="store/franchise.html">가맹 안내</a></li>
             </ul>
           </li>
-          <li class="gnb-item has-sub">
-            <a href="#">커뮤니티</a>
+          <li class="gnb-item has-sub"><a href="#">커뮤니티</a>
             <ul class="sub-menu">
               <li><a href="community/reviews.html">고객 리뷰</a></li>
               <li><a href="community/notice.html">공지사항</a></li>
@@ -58,406 +53,261 @@
           </li>
         </ul>
       </nav>
-      <button class="mobile-toggle" aria-label="메뉴 열기">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="mobile-toggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- 1. Hero: Crockett & Jones 스타일 풀스크린 비주얼 -->
   <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="hero-sub">Handcrafted Comfort</p>
-      <h1 class="hero-title">당신의 걸음에<br><em>편안함</em>을 더하다</h1>
-      <p class="hero-desc">수제화의 정성과 기능성의 과학이 만나<br>당신만을 위한 한 켤레를 완성합니다</p>
-      <a href="#mywokio" class="hero-cta">나만의 워키오 찾기</a>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Feature Section -->
-  <section id="features">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-sub">Technology</p>
-        <h2 class="section-title">걸음의 과학,<br>워키오 기술력</h2>
-        <p class="section-desc">워키오만의 독자적인 기술이 당신의 발을 과학적으로 지지합니다</p>
+    <div class="hero-slider">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&q=80')">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+          <p class="hero-eyebrow">New Collection</p>
+          <h1>걸음의 품격을<br>완성하다</h1>
+          <a href="products/index.html" class="hero-btn">VIEW THE COLLECTION</a>
+        </div>
       </div>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="28" width="48" height="4" rx="2" fill="currentColor" opacity="0.2"/>
-              <rect x="12" y="22" width="40" height="4" rx="2" fill="currentColor" opacity="0.35"/>
-              <rect x="16" y="16" width="32" height="4" rx="2" fill="currentColor" opacity="0.5"/>
-              <rect x="20" y="10" width="24" height="4" rx="2" fill="currentColor" opacity="0.7"/>
-              <rect x="24" y="4" width="16" height="4" rx="2" fill="currentColor"/>
-              <path d="M6 36 C6 36 16 44 32 44 C48 44 58 36 58 36 L58 52 C58 56 54 60 50 60 L14 60 C10 60 6 56 6 52 Z" fill="currentColor" opacity="0.15"/>
-            </svg>
-          </div>
-          <h3>5단 아치 서포트</h3>
-          <p>발바닥의 5개 아치를 각각 지지하는 독자적 구조로 장시간 보행에도 피로를 최소화합니다</p>
-          <div class="feature-hover-detail">
-            <span>01</span>
-            <p>체중을 고르게 분산시켜 무릎과 허리 부담을 줄여줍니다</p>
-          </div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=1920&q=80')">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+          <p class="hero-eyebrow">Handcrafted Comfort</p>
+          <h1>수제화의 정성,<br>과학의 편안함</h1>
+          <a href="about/technology.html" class="hero-btn">EXPLORE TECHNOLOGY</a>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="32" r="24" stroke="currentColor" stroke-width="2" opacity="0.2"/>
-              <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="2" opacity="0.4"/>
-              <circle cx="32" cy="32" r="8" fill="currentColor" opacity="0.6"/>
-              <path d="M32 8 L34 28 L32 32 L30 28 Z" fill="currentColor"/>
-              <path d="M56 32 L36 34 L32 32 L36 30 Z" fill="currentColor"/>
-              <path d="M32 56 L30 36 L32 32 L34 36 Z" fill="currentColor"/>
-              <path d="M8 32 L28 30 L32 32 L28 34 Z" fill="currentColor"/>
-            </svg>
-          </div>
-          <h3>정밀 풋 스캐닝</h3>
-          <p>3D 풋스캐너로 발의 형태를 정밀 측정하여 개인 맞춤형 핏을 제공합니다</p>
-          <div class="feature-hover-detail">
-            <span>02</span>
-            <p>250개 이상의 측정 포인트로 발의 압력 분포를 분석합니다</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 4 L40 24 L60 24 L44 38 L50 58 L32 46 L14 58 L20 38 L4 24 L24 24 Z" fill="currentColor" opacity="0.15"/>
-              <path d="M32 12 L37 24 L50 24 L40 32 L44 46 L32 38 L20 46 L24 32 L14 24 L27 24 Z" stroke="currentColor" stroke-width="2" fill="none"/>
-            </svg>
-          </div>
-          <h3>프리미엄 수제 공정</h3>
-          <p>숙련된 장인의 손끝에서 탄생하는 한 땀 한 땀의 정성이 깃든 수제화입니다</p>
-          <div class="feature-hover-detail">
-            <span>03</span>
-            <p>120여 가지 공정을 거쳐 한 켤레가 완성됩니다</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 48 C16 48 20 20 32 20 C44 20 48 48 48 48" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <path d="M12 48 L52 48" stroke="currentColor" stroke-width="2"/>
-              <circle cx="32" cy="16" r="4" fill="currentColor" opacity="0.6"/>
-              <path d="M24 48 L24 54" stroke="currentColor" stroke-width="2" opacity="0.4"/>
-              <path d="M32 48 L32 58" stroke="currentColor" stroke-width="2" opacity="0.4"/>
-              <path d="M40 48 L40 54" stroke="currentColor" stroke-width="2" opacity="0.4"/>
-            </svg>
-          </div>
-          <h3>의료기기 인증 인솔</h3>
-          <p>의료기기 인증을 받은 기능성 인솔로 발 건강을 과학적으로 케어합니다</p>
-          <div class="feature-hover-detail">
-            <span>04</span>
-            <p>식약처 인증 의료기기로서 안전성과 효과가 검증되었습니다</p>
-          </div>
-        </div>
+      </div>
+    </div>
+    <div class="hero-nav">
+      <button class="hero-nav-btn" onclick="changeSlide(-1)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <button class="hero-nav-btn" onclick="changeSlide(1)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </div>
+    <!-- 하단 제품 가로 나열 (Crockett & Jones 스타일) -->
+    <div class="hero-products">
+      <div class="hero-product-item">
+        <div class="hp-img" style="background-image:url('https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=400&q=80')"></div>
+        <p class="hp-name">CLASSIC OXFORD</p>
+        <p class="hp-desc">Premium Leather</p>
+      </div>
+      <div class="hero-product-item">
+        <div class="hp-img" style="background-image:url('https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&q=80')"></div>
+        <p class="hp-name">COMFORT LOAFER</p>
+        <p class="hp-desc">5-Arch Support</p>
+      </div>
+      <div class="hero-product-item">
+        <div class="hp-img" style="background-image:url('https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=400&q=80')"></div>
+        <p class="hp-name">ANKLE BOOTS</p>
+        <p class="hp-desc">Waterproof Leather</p>
+      </div>
+      <div class="hero-product-item">
+        <div class="hp-img" style="background-image:url('https://images.unsplash.com/photo-1560343090-f0409e92791a?w=400&q=80')"></div>
+        <p class="hp-name">CASUAL WALKER</p>
+        <p class="hp-desc">Tri-Sol System</p>
+      </div>
+      <div class="hero-product-item">
+        <div class="hp-img" style="background-image:url('https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&q=80')"></div>
+        <p class="hp-name">ACTIVE SNEAKERS</p>
+        <p class="hp-desc">Dial Fit</p>
       </div>
     </div>
   </section>
 
-  <!-- My WOKIO Section -->
-  <section id="mywokio">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-sub">Personalized</p>
-        <h2 class="section-title">오늘, 당신의<br>워키오는?</h2>
-        <p class="section-desc">3단계 선택으로 나에게 딱 맞는 워키오를 찾아보세요</p>
+  <!-- 2. ECCO 스타일 2컬럼 이미지 그리드 -->
+  <section id="ecco-grid">
+    <div class="ecco-row">
+      <div class="ecco-cell ecco-img" style="background-image:url('https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=960&q=80')">
+        <div class="ecco-label">
+          <p>Versatile design made for city living.</p>
+          <a href="products/index.html" class="ecco-btn">Discover Collection</a>
+        </div>
       </div>
-      <div class="mywokio-steps">
-        <div class="step-progress">
-          <div class="step-dot active" data-step="1">1</div>
-          <div class="step-line"></div>
-          <div class="step-dot" data-step="2">2</div>
-          <div class="step-line"></div>
-          <div class="step-dot" data-step="3">3</div>
-        </div>
+      <div class="ecco-cell ecco-img" style="background-image:url('https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=960&q=80')"></div>
+    </div>
+    <div class="ecco-row">
+      <div class="ecco-cell ecco-img" style="background-image:url('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=960&q=80')"></div>
+      <div class="ecco-cell ecco-copy">
+        <p class="ecco-copy-eyebrow">Confidence In Every Step</p>
+        <h2>편안함이 만드는<br>자신감</h2>
+        <p class="ecco-copy-desc">매일의 걸음에 워키오의 기술력을 더해보세요</p>
+        <a href="about/technology.html" class="ecco-btn dark">Discover Technology</a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Step 1 -->
-        <div class="step-panel active" data-step="1">
-          <h3 class="step-title">STEP 1. 나는 이런 하루를 보낸다</h3>
-          <div class="step-options">
-            <button class="step-option" data-value="walking">
-              <div class="option-icon">🚶</div>
-              <span>많이 걷는다</span>
-            </button>
-            <button class="step-option" data-value="driving">
-              <div class="option-icon">🚗</div>
-              <span>장시간 운전</span>
-            </button>
-            <button class="step-option" data-value="travel">
-              <div class="option-icon">✈️</div>
-              <span>여행</span>
-            </button>
-            <button class="step-option" data-value="sales">
-              <div class="option-icon">💼</div>
-              <span>영업직</span>
-            </button>
-            <button class="step-option" data-value="exercise">
-              <div class="option-icon">🏃</div>
-              <span>운동</span>
-            </button>
-            <button class="step-option" data-value="housework">
-              <div class="option-icon">🏠</div>
-              <span>주부</span>
-            </button>
-          </div>
+  <!-- 3. 기능 섹션: Shoealls 스타일 대형 이미지+텍스트 블록 -->
+  <section id="func-blocks">
+    <div class="func-row">
+      <div class="func-block func-img-block" style="background-color:#2a3a2a;">
+        <div class="func-img-inner" style="background-image:url('https://images.unsplash.com/photo-1511556532299-8f662fc26c06?w=800&q=80')"></div>
+        <div class="func-img-text">
+          <p class="func-small">특수 재질의 돌기로 공기순환으로 열 배출</p>
+          <h3>인벤치오 쿨러 시스템</h3>
         </div>
-
-        <!-- Step 2 -->
-        <div class="step-panel" data-step="2">
-          <h3 class="step-title">STEP 2. 발에서 제일 걱정되는 부분</h3>
-          <div class="step-options">
-            <button class="step-option" data-value="burning">
-              <div class="option-icon">🔥</div>
-              <span>발바닥 화끈거림</span>
-            </button>
-            <button class="step-option" data-value="heel">
-              <div class="option-icon">🦶</div>
-              <span>발뒤꿈치</span>
-            </button>
-            <button class="step-option" data-value="toe">
-              <div class="option-icon">👣</div>
-              <span>발가락 휘어짐</span>
-            </button>
-            <button class="step-option" data-value="swelling">
-              <div class="option-icon">💧</div>
-              <span>발 붓기</span>
-            </button>
-            <button class="step-option" data-value="joint">
-              <div class="option-icon">🦴</div>
-              <span>무릎, 허리 부담</span>
-            </button>
-          </div>
+      </div>
+      <div class="func-block func-content-block">
+        <div class="func-content-inner">
+          <p class="func-eyebrow">발 건강을 위한 최고의 선택</p>
+          <h3><span class="accent">수울즈만</span>의 맞춤 <span class="accent">인솔</span>을 만나고<br><span class="accent">생활</span>의 <span class="accent">활력</span>을 찾으세요</h3>
+          <a href="lab/mywokio.html" class="func-link">Learn more →</a>
         </div>
-
-        <!-- Step 3 -->
-        <div class="step-panel" data-step="3">
-          <h3 class="step-title">STEP 3. 원하는 스타일</h3>
-          <div class="step-options">
-            <button class="step-option" data-value="casual">
-              <div class="option-icon">👟</div>
-              <span>캐주얼화</span>
-            </button>
-            <button class="step-option" data-value="formal">
-              <div class="option-icon">👞</div>
-              <span>단정한 구두</span>
-            </button>
-            <button class="step-option" data-value="boots">
-              <div class="option-icon">🥾</div>
-              <span>앵클부츠</span>
-            </button>
-            <button class="step-option" data-value="dial">
-              <div class="option-icon">⚙️</div>
-              <span>다이얼 타입</span>
-            </button>
-            <button class="step-option" data-value="sneakers">
-              <div class="option-icon">👟</div>
-              <span>운동화 타입</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Result -->
-        <div class="step-result" style="display:none;">
-          <div class="result-card">
-            <div class="result-badge">당신을 위한 추천</div>
-            <h3 class="result-name">워키오 트라이솔 클래식</h3>
-            <div class="result-image">
-              <div class="result-placeholder">
-                <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="200" height="120" rx="8" fill="#f5f0eb"/>
-                  <path d="M40 85 C40 85 60 45 100 45 C140 45 160 85 160 85" stroke="#8B7355" stroke-width="3" fill="none"/>
-                  <ellipse cx="100" cy="88" rx="65" ry="8" fill="#8B7355" opacity="0.15"/>
-                </svg>
-              </div>
-            </div>
-            <p class="result-desc">장시간 보행에도 편안한 5단 아치 서포트와 프리미엄 가죽의 조화. 당신의 일상에 격조를 더합니다.</p>
-            <div class="result-features">
-              <span class="result-tag">5단 아치 서포트</span>
-              <span class="result-tag">프리미엄 가죽</span>
-              <span class="result-tag">의료기기 인증 인솔</span>
-            </div>
-            <button class="result-cta" onclick="resetMyWokio()">다시 선택하기</button>
-          </div>
+        <div class="func-side-btns">
+          <a href="store/index.html" class="func-side-btn">
+            <span class="fsb-icon">📍</span>
+            <span>가까운<br>매장 찾기</span>
+          </a>
+          <a href="store/manager.html" class="func-side-btn">
+            <span class="fsb-icon">👤</span>
+            <span>점장상담</span>
+          </a>
+          <a href="community/news.html" class="func-side-btn">
+            <span class="fsb-icon">📰</span>
+            <span>e-카탈로그<br>다운로드</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ambassador Section -->
+  <!-- 4. 앰버서더: 르무통 스타일 전체화면 대형 사진 -->
   <section id="ambassador">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-sub">Ambassador</p>
-        <h2 class="section-title">워키오와 함께하는<br>사람들</h2>
-        <p class="section-desc">워키오를 만나고 일상이 바뀐 앰버서더들의 이야기</p>
-      </div>
-      <div class="ambassador-slider">
-        <div class="ambassador-track">
-          <div class="ambassador-card">
-            <div class="ambassador-img">
-              <div class="amb-placeholder">
-                <svg viewBox="0 0 300 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="300" height="380" rx="12" fill="#f0ebe5"/>
-                  <circle cx="150" cy="140" r="50" fill="#d4c5b3"/>
-                  <path d="M80 320 C80 260 110 230 150 230 C190 230 220 260 220 320" fill="#d4c5b3"/>
-                </svg>
-              </div>
-            </div>
-            <div class="ambassador-info">
-              <span class="amb-tag">앰버서더</span>
-              <h4>김정현</h4>
-              <p class="amb-role">마라톤 러너 · 10년차</p>
-              <p class="amb-quote">"무릎 통증 때문에 달리기를 포기할 뻔 했는데, 워키오 인솔을 만나고 다시 풀코스를 완주했습니다."</p>
-            </div>
-          </div>
-          <div class="ambassador-card">
-            <div class="ambassador-img">
-              <div class="amb-placeholder">
-                <svg viewBox="0 0 300 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="300" height="380" rx="12" fill="#e8e3dd"/>
-                  <circle cx="150" cy="140" r="50" fill="#c5b8a5"/>
-                  <path d="M80 320 C80 260 110 230 150 230 C190 230 220 260 220 320" fill="#c5b8a5"/>
-                </svg>
-              </div>
-            </div>
-            <div class="ambassador-info">
-              <span class="amb-tag">앰버서더</span>
-              <h4>이수진</h4>
-              <p class="amb-role">초등교사 · 15년차</p>
-              <p class="amb-quote">"하루 종일 서서 아이들과 함께하는 직업이라 발이 늘 아팠어요. 워키오 덕분에 퇴근 후에도 발이 가볍습니다."</p>
-            </div>
-          </div>
-          <div class="ambassador-card">
-            <div class="ambassador-img">
-              <div class="amb-placeholder">
-                <svg viewBox="0 0 300 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="300" height="380" rx="12" fill="#ebe5df"/>
-                  <circle cx="150" cy="140" r="50" fill="#ccc0ae"/>
-                  <path d="M80 320 C80 260 110 230 150 230 C190 230 220 260 220 320" fill="#ccc0ae"/>
-                </svg>
-              </div>
-            </div>
-            <div class="ambassador-info">
-              <span class="amb-tag">앰버서더</span>
-              <h4>박도윤</h4>
-              <p class="amb-role">영업사원 · 8년차</p>
-              <p class="amb-quote">"매일 외근으로 만보 이상 걷는데, 워키오를 신고 나서 허리 통증이 눈에 띄게 줄었습니다."</p>
-            </div>
-          </div>
+    <div class="amb-title">Ambassador</div>
+    <div class="amb-hero-slider">
+      <div class="amb-hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80')">
+        <div class="amb-hero-caption">
+          <span class="amb-hero-tag">앰버서더</span>
+          <h3>김정현</h3>
+          <p>마라톤 러너 · 10년차</p>
         </div>
-        <div class="slider-controls">
-          <button class="slider-btn prev" aria-label="이전" onclick="slideAmbassador(-1)">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </button>
-          <button class="slider-btn next" aria-label="다음" onclick="slideAmbassador(1)">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </button>
+      </div>
+      <div class="amb-hero-slide" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=80')">
+        <div class="amb-hero-caption">
+          <span class="amb-hero-tag">앰버서더</span>
+          <h3>이수진</h3>
+          <p>초등교사 · 15년차</p>
+        </div>
+      </div>
+      <div class="amb-hero-slide" style="background-image:url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=1200&q=80')">
+        <div class="amb-hero-caption">
+          <span class="amb-hero-tag">앰버서더</span>
+          <h3>박도윤</h3>
+          <p>영업사원 · 8년차</p>
         </div>
       </div>
     </div>
+    <div class="amb-hero-nav">
+      <button onclick="changeAmbSlide(-1)">←</button>
+      <button onclick="changeAmbSlide(1)">→</button>
+    </div>
+    <p class="amb-subtext">차르 요시가 서이느</p>
   </section>
 
-  <!-- Reviews Section -->
+  <!-- 5. 리뷰: 스케쳐스 스타일 사진+텍스트 가로 슬라이더 -->
   <section id="reviews">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-sub">Reviews</p>
-        <h2 class="section-title">고객 리뷰</h2>
-        <p class="section-desc">실제 워키오를 경험한 고객들의 생생한 후기</p>
+    <h2 class="review-title">BEST REVIEW</h2>
+    <div class="review-slider-wrap">
+      <button class="review-arrow left" onclick="scrollReviews(-1)">←</button>
+      <div class="review-slider">
+        <div class="review-slide">
+          <div class="rs-img" style="background-image:url('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&q=80')"></div>
+          <div class="rs-body">
+            <div class="rs-stars">★★★★★</div>
+            <p class="rs-text">즐거운 여행에서 정보찾다**<br>초간에돼서 ~ 과럽그때에요<br>추천합니다 ~~</p>
+            <p class="rs-meta">킹 코지</p>
+          </div>
+        </div>
+        <div class="review-slide">
+          <div class="rs-img" style="background-image:url('https://images.unsplash.com/photo-1560343090-f0409e92791a?w=400&q=80')"></div>
+          <div class="rs-body">
+            <div class="rs-stars">★★★★★</div>
+            <p class="rs-text">디자인도 고급스럽고 더<br>안쪽하는건은 신발 깔이 정말<br>발등에 딱이에요, 발도 편 았어서<br>좋았던 것 같아요</p>
+            <p class="rs-meta">[유가체 특돰] 이채현 거주자<br>(솔잉인스)</p>
+          </div>
+        </div>
+        <div class="review-slide">
+          <div class="rs-img" style="background-image:url('https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&q=80')"></div>
+          <div class="rs-body">
+            <div class="rs-stars">★★★★★</div>
+            <p class="rs-text">최근 들어서 관심<br>사험느적입이이어요<br>스케치스신발은 진짜로.<br>가벼워서 란치수 임하서<br>기분대적더라고~ 탈아한딘고</p>
+            <p class="rs-meta">코지 밈</p>
+          </div>
+        </div>
       </div>
-      <div class="review-grid">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"족저근막염으로 고생했는데, 워키오 신발을 신고 나서 통증이 많이 완화됐어요. 수제화라 발에 딱 맞는 느낌이 정말 좋습니다."</p>
-          <div class="review-author">
-            <div class="review-avatar">H</div>
-            <div>
-              <strong>홍** 님</strong>
-              <span>트라이솔 클래식 구매</span>
-            </div>
-          </div>
+      <button class="review-arrow right" onclick="scrollReviews(1)">→</button>
+    </div>
+    <div class="review-dots">
+      <span class="dot"></span><span class="dot"></span><span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- 6. 나만의 워키오 (간략 배너) -->
+  <section id="mywokio-banner">
+    <div class="container">
+      <div class="mw-banner-inner">
+        <div class="mw-banner-text">
+          <p class="section-sub">Personalized</p>
+          <h2>오늘, 당신의 워키오는?</h2>
+          <p>3단계 선택으로 나에게 딱 맞는 워키오를 찾아보세요</p>
+          <a href="lab/mywokio.html" class="mw-banner-btn">나만의 워키오 찾기 →</a>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"남편 선물로 구매했는데, 영업직이라 하루 종일 돌아다녀도 편하다고 너무 좋아해요. 디자인도 깔끔하고요."</p>
-          <div class="review-author">
-            <div class="review-avatar">J</div>
-            <div>
-              <strong>정** 님</strong>
-              <span>5단창 모던 구매</span>
-            </div>
+        <div class="mw-banner-visual" style="background-image:url('https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&q=80')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 소식란 (Shoealls 스타일) -->
+  <section id="news-section">
+    <div class="container">
+      <h2 class="news-sec-title">워키오 소식</h2>
+      <div class="news-tabs">
+        <button class="news-tab active">SPONSOR</button>
+        <button class="news-tab">언론보도</button>
+      </div>
+      <div class="news-carousel">
+        <div class="news-item">
+          <div class="news-item-img" style="background-image:url('https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?w=400&q=80')">
+            <div class="news-date"><span class="nd-month">2026.04</span><span class="nd-day">14</span></div>
           </div>
+          <p class="news-item-title">한국 신발 회사 워키오 CEO, BRK 뉴스 채널 사업 출마...</p>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"매장에서 풋스캐너로 발 측정하고 맞춘 인솔이 정말 신세계예요. 평발인데 아치 서포트가 확실히 다릅니다."</p>
-          <div class="review-author">
-            <div class="review-avatar">K</div>
-            <div>
-              <strong>김** 님</strong>
-              <span>맞춤 인솔 제작</span>
-            </div>
+        <div class="news-item">
+          <div class="news-item-img" style="background-image:url('https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80')">
+            <div class="news-date"><span class="nd-month">2026.03</span><span class="nd-day">12</span></div>
           </div>
+          <p class="news-item-title">[한일콤텍터] 박서인이 준비한 선물</p>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★☆</div>
-          <p class="review-text">"여행용으로 구매했는데, 유럽 2주 여행 내내 발이 편했어요. 다음엔 부츠 타입도 도전해보려고요!"</p>
-          <div class="review-author">
-            <div class="review-avatar">L</div>
-            <div>
-              <strong>이** 님</strong>
-              <span>캐주얼 워커 구매</span>
-            </div>
+        <div class="news-item">
+          <div class="news-item-img" style="background-image:url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&q=80')">
+            <div class="news-date"><span class="nd-month">2026.02</span><span class="nd-day">09</span></div>
           </div>
+          <p class="news-item-title">TV 조선 미스트롯3' 제작지원</p>
+        </div>
+        <div class="news-item">
+          <div class="news-item-img" style="background-image:url('https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&q=80')">
+            <div class="news-date"><span class="nd-month">2026.01</span><span class="nd-day">09</span></div>
+          </div>
+          <p class="news-item-title">tvN '만세살롱' 제작지원</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Store Section -->
-  <section id="store">
+  <!-- 8. 매장안내 + 점장소개 간략 -->
+  <section id="store-brief">
     <div class="container">
-      <div class="store-layout">
-        <div class="store-info">
+      <div class="store-brief-layout">
+        <div class="store-brief-img" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80')"></div>
+        <div class="store-brief-text">
           <p class="section-sub">Store</p>
-          <h2 class="section-title">매장 안내</h2>
-          <div class="store-detail">
-            <div class="store-item">
-              <h4>워키오 본점</h4>
-              <p>서울특별시 강남구 테헤란로 123<br>영업시간: 10:00 - 20:00 (연중무휴)</p>
-              <a href="#" class="store-link">오시는 길 →</a>
-            </div>
-            <div class="store-item">
-              <h4>워키오 부산점</h4>
-              <p>부산광역시 해운대구 센텀중앙로 45<br>영업시간: 10:00 - 20:00 (연중무휴)</p>
-              <a href="#" class="store-link">오시는 길 →</a>
-            </div>
+          <h2>매장 안내</h2>
+          <p class="sb-desc">워키오를 직접 만나보실 수 있는 공간</p>
+          <div class="sb-stores">
+            <div class="sb-store"><strong>워키오 수유점</strong><br>서울 강북구 도봉로 · 02-0000-0000</div>
+            <div class="sb-store"><strong>워키오 강남점</strong><br>서울 강남구 테헤란로 · 02-0000-0001</div>
           </div>
-          <a href="#" class="store-franchise">가맹 문의 →</a>
-        </div>
-        <div class="store-manager">
-          <div class="manager-card">
-            <div class="manager-img">
-              <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="280" height="320" rx="12" fill="#f0ebe5"/>
-                <circle cx="140" cy="120" r="45" fill="#d4c5b3"/>
-                <path d="M70 290 C70 235 100 210 140 210 C180 210 210 235 210 290" fill="#d4c5b3"/>
-              </svg>
-            </div>
-            <div class="manager-info">
-              <span class="manager-tag">점장 소개</span>
-              <h4>최영호 점장</h4>
-              <p class="manager-career">수제화 경력 25년</p>
-              <p class="manager-quote">"한 분 한 분의 발에 맞는 신발을 찾아드리는 것이 저의 보람입니다. 편안한 걸음이 건강한 삶의 시작이라고 믿습니다."</p>
-            </div>
-          </div>
+          <a href="store/index.html" class="sb-link">전체 매장 보기 →</a>
         </div>
       </div>
     </div>
@@ -472,27 +322,12 @@
           <p>수제화의 새로운 기준<br>당신의 걸음에 편안함을 더합니다</p>
         </div>
         <div class="footer-links">
-          <div class="footer-col">
-            <h5>워키오</h5>
-            <a href="about/greeting.html">인사말</a>
-            <a href="about/story.html">브랜드 스토리</a>
-            <a href="about/technology.html">기능 안내</a>
-          </div>
-          <div class="footer-col">
-            <h5>제품</h5>
-            <a href="products/index.html">전체 제품</a>
-          </div>
-          <div class="footer-col">
-            <h5>고객지원</h5>
-            <a href="store/index.html">매장 안내</a>
-            <a href="community/reviews.html">고객 리뷰</a>
-            <a href="community/notice.html">공지사항</a>
-          </div>
+          <div class="footer-col"><h5>워키오</h5><a href="about/greeting.html">인사말</a><a href="about/story.html">브랜드 스토리</a><a href="about/technology.html">기능 안내</a></div>
+          <div class="footer-col"><h5>제품</h5><a href="products/index.html">전체 제품</a></div>
+          <div class="footer-col"><h5>고객지원</h5><a href="store/index.html">매장 안내</a><a href="community/reviews.html">고객 리뷰</a><a href="community/notice.html">공지사항</a></div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 WOKIO. All rights reserved. | 사업자등록번호: 000-00-00000</p>
-      </div>
+      <div class="footer-bottom"><p>&copy; 2026 WOKIO. All rights reserved. | 사업자등록번호: 000-00-00000</p></div>
     </div>
   </footer>
 
