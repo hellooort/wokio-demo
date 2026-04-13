@@ -1,16 +1,20 @@
 // Header scroll effect
 const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 60);
-});
+if (header && !document.body.classList.contains('sub-page')) {
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+}
 
 // Mobile menu toggle
 const mobileToggle = document.querySelector('.mobile-toggle');
 const gnb = document.querySelector('.gnb');
-mobileToggle.addEventListener('click', () => {
-  gnb.classList.toggle('open');
-  document.body.style.overflow = gnb.classList.contains('open') ? 'hidden' : '';
-});
+if (mobileToggle && gnb) {
+  mobileToggle.addEventListener('click', () => {
+    gnb.classList.toggle('open');
+    document.body.style.overflow = gnb.classList.contains('open') ? 'hidden' : '';
+  });
+}
 
 // Scroll reveal
 function initReveal() {
@@ -139,6 +143,7 @@ let ambSlideIndex = 0;
 function slideAmbassador(dir) {
   const track = document.querySelector('.ambassador-track');
   const cards = document.querySelectorAll('.ambassador-card');
+  if (!track || !cards.length) return;
   const cardWidth = cards[0].offsetWidth + 24;
   const maxIndex = Math.max(0, cards.length - Math.floor(track.parentElement.offsetWidth / cardWidth));
 
@@ -153,7 +158,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      if (gnb.classList.contains('open')) {
+      if (gnb && gnb.classList.contains('open')) {
         gnb.classList.remove('open');
         document.body.style.overflow = '';
       }
