@@ -899,6 +899,229 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
+/* === My WOKIO 3-Step Selection === */
+.mywokio-steps {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.step-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 48px;
+}
+
+.step-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 2px solid var(--color-border);
+  color: var(--color-text-light);
+  background: var(--color-white);
+  transition: var(--transition);
+}
+
+.step-dot.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(139,115,85,0.3);
+}
+
+.step-dot.completed {
+  background: #27ae60;
+  border-color: #27ae60;
+  color: #fff;
+}
+
+.step-line {
+  width: 60px;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.step-panel {
+  display: none;
+}
+
+.step-panel.active {
+  display: block;
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.step-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--color-text);
+}
+
+.step-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.step-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 16px;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.step-option:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(44,36,32,0.06);
+}
+
+.step-option.selected {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(139,115,85,0.25);
+}
+
+.step-option.selected .option-icon {
+  filter: brightness(1.2);
+}
+
+.option-icon {
+  font-size: 2rem;
+}
+
+/* Step Result */
+.step-result {
+  animation: fadeUp 0.5s ease;
+}
+
+.result-card {
+  background: var(--color-white);
+  border-radius: 24px;
+  padding: 48px 40px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 12px 48px rgba(44,36,32,0.08);
+}
+
+.result-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 50px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.result-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+
+.result-image {
+  margin: 0 auto 24px;
+  max-width: 320px;
+}
+
+.result-placeholder svg {
+  width: 100%;
+  height: auto;
+}
+
+.result-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.result-tag {
+  padding: 6px 16px;
+  background: var(--color-warm, #f5f0eb);
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.result-cta {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.result-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139,115,85,0.3);
+}
+
+@media (max-width: 768px) {
+  .step-options {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .step-option {
+    padding: 20px 12px;
+  }
+  .result-card {
+    padding: 32px 24px;
+  }
+  .result-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-options {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* Sub page header always scrolled */
 body.sub-page #header {
   background: rgba(253, 251, 248, 0.95);
