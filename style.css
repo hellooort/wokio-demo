@@ -94,6 +94,53 @@ img { max-width:100%; display:block; }
 .hp-name { font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:2px; }
 .hp-desc { font-size:0.7rem; color:var(--text-light); }
 
+/* === 1-1. Logo Marquee (무한 가로 스크롤) === */
+#logo-marquee {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 28px 0;
+}
+.marquee-track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+}
+.marquee-item {
+  flex: 0 0 auto;
+  min-width: 180px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  transition: 0.3s var(--ease);
+}
+.marquee-item:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  border-style: solid;
+}
+#logo-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (max-width: 768px) {
+  .marquee-track { gap: 28px; animation-duration: 24s; }
+  .marquee-item { min-width: 140px; height: 60px; font-size: 0.76rem; }
+}
+
 /* === 2. ECCO Style Grid === */
 #ecco-grid { }
 .ecco-row { display:grid; grid-template-columns:1fr 1fr; min-height:500px; }
