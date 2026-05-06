@@ -14,7 +14,7 @@
       <a href="../index.html" class="logo">WOKIO</a>
       <nav class="gnb"><ul class="gnb-list">
         <li class="gnb-item has-sub"><a href="#">워키오</a><ul class="sub-menu"><li><a href="../about/greeting.html">인사말</a></li><li><a href="../about/story.html">브랜드 스토리</a></li><li><a href="../about/technology.html">기능 안내</a></li><li><a href="../about/ambassador.html">워키오 앰버서더</a></li></ul></li>
-        <li class="gnb-item has-sub"><a href="#">발 건강 연구소</a><ul class="sub-menu"><li><a href="mywokio.html">나만의 워키오</a></li><li><a href="modifigio.html">모디피지오 활용</a></li><li><a href="footscanner.html">풋스캐너 활용</a></li><li><a href="certification.html">제품 시험성적서</a></li><li><a href="patent.html">특허</a></li></ul></li>
+        <li class="gnb-item has-sub"><a href="#">발 건강 연구소</a><ul class="sub-menu"><li><a href="mywokio.html">나만의 워키오</a></li><li><a href="footscanner.html">풋스캐너 · 모디피지오</a></li><li><a href="patent.html">특허 · 인증</a></li></ul></li><li class="gnb-item has-sub"><a href="instructor.html">걷기 지도자 워큐</a><ul class="sub-menu"><li><a href="instructor.html">프로그램 안내</a></li></ul></li>
         <li class="gnb-item has-sub"><a href="#">제품안내</a><ul class="sub-menu"><li><a href="../products/index.html">전체 제품</a></li></ul></li>
         <li class="gnb-item has-sub"><a href="#">매장안내</a><ul class="sub-menu"><li><a href="../store/index.html">매장 안내</a></li><li><a href="../store/manager.html">점장 소개</a></li><li><a href="../store/franchise.html">가맹 안내</a></li></ul></li>
         <li class="gnb-item has-sub"><a href="#">커뮤니티</a><ul class="sub-menu"><li><a href="../community/reviews.html">고객 리뷰</a></li><li><a href="../community/notice.html">공지사항</a></li><li><a href="../community/news.html">워키오 소식</a></li></ul></li>
@@ -40,6 +40,8 @@
         <h2 class="section-title">오늘, 당신의<br>워키오는?</h2>
         <p class="section-desc">3단계 선택으로 나에게 딱 맞는 워키오를 찾아보세요</p>
       </div>
+      <p style="text-align:center;font-size:0.86rem;color:var(--color-text-light);margin-bottom:24px;">간단한 3단계 선택으로 6가지 추천 라인 중 가장 잘 맞는 한 켤레를 안내해 드려요.</p>
+
       <div class="mywokio-steps">
         <div class="step-progress">
           <div class="step-dot active" data-step="1">1</div>
@@ -48,44 +50,49 @@
           <div class="step-line"></div>
           <div class="step-dot" data-step="3">3</div>
         </div>
+
+        <!-- STEP 1: 라이프스타일 (4개로 축소) -->
         <div class="step-panel active" data-step="1">
-          <h3 class="step-title">STEP 1. 나는 이런 하루를 보낸다</h3>
-          <div class="step-options">
+          <h3 class="step-title">STEP 1. 평소 활동 패턴은?</h3>
+          <div class="step-options" style="grid-template-columns:repeat(4,1fr);">
             <button class="step-option" data-value="walking"><div class="option-icon">🚶</div><span>많이 걷는다</span></button>
-            <button class="step-option" data-value="driving"><div class="option-icon">🚗</div><span>장시간 운전</span></button>
-            <button class="step-option" data-value="travel"><div class="option-icon">✈️</div><span>여행</span></button>
-            <button class="step-option" data-value="sales"><div class="option-icon">💼</div><span>영업직</span></button>
-            <button class="step-option" data-value="exercise"><div class="option-icon">🏃</div><span>운동</span></button>
-            <button class="step-option" data-value="housework"><div class="option-icon">🏠</div><span>주부</span></button>
+            <button class="step-option" data-value="standing"><div class="option-icon">💼</div><span>장시간 서서<br>일한다</span></button>
+            <button class="step-option" data-value="sitting"><div class="option-icon">🚗</div><span>운전·사무직</span></button>
+            <button class="step-option" data-value="active"><div class="option-icon">🏃</div><span>운동·여행</span></button>
           </div>
         </div>
+
+        <!-- STEP 2: 발 고민 (4개로 축소·분류화) -->
         <div class="step-panel" data-step="2">
-          <h3 class="step-title">STEP 2. 발에서 제일 걱정되는 부분</h3>
-          <div class="step-options">
-            <button class="step-option" data-value="burning"><div class="option-icon">🔥</div><span>발바닥 화끈거림</span></button>
-            <button class="step-option" data-value="heel"><div class="option-icon">🦶</div><span>발뒤꿈치</span></button>
-            <button class="step-option" data-value="toe"><div class="option-icon">👣</div><span>발가락 휘어짐</span></button>
-            <button class="step-option" data-value="swelling"><div class="option-icon">💧</div><span>발 붓기</span></button>
-            <button class="step-option" data-value="joint"><div class="option-icon">🦴</div><span>무릎, 허리 부담</span></button>
+          <h3 class="step-title">STEP 2. 발에서 가장 신경 쓰이는 부분은?</h3>
+          <div class="step-options" style="grid-template-columns:repeat(4,1fr);">
+            <button class="step-option" data-value="arch"><div class="option-icon">🦶</div><span>평발 / 요족<br>(아치)</span></button>
+            <button class="step-option" data-value="pain"><div class="option-icon">🔥</div><span>발바닥 통증<br>화끈거림</span></button>
+            <button class="step-option" data-value="joint"><div class="option-icon">🦴</div><span>무릎·허리<br>부담</span></button>
+            <button class="step-option" data-value="design"><div class="option-icon">✨</div><span>특별한 고민<br>없음 (디자인)</span></button>
           </div>
         </div>
+
+        <!-- STEP 3: 원하는 스타일 (4개로 축소) -->
         <div class="step-panel" data-step="3">
-          <h3 class="step-title">STEP 3. 원하는 스타일</h3>
-          <div class="step-options">
-            <button class="step-option" data-value="casual"><div class="option-icon">👟</div><span>캐주얼화</span></button>
-            <button class="step-option" data-value="formal"><div class="option-icon">👞</div><span>단정한 구두</span></button>
+          <h3 class="step-title">STEP 3. 원하는 스타일은?</h3>
+          <div class="step-options" style="grid-template-columns:repeat(4,1fr);">
+            <button class="step-option" data-value="casual"><div class="option-icon">👟</div><span>캐주얼·일상</span></button>
+            <button class="step-option" data-value="formal"><div class="option-icon">👞</div><span>단정한<br>구두</span></button>
             <button class="step-option" data-value="boots"><div class="option-icon">🥾</div><span>앵클부츠</span></button>
-            <button class="step-option" data-value="dial"><div class="option-icon">⚙️</div><span>다이얼 타입</span></button>
-            <button class="step-option" data-value="sneakers"><div class="option-icon">👟</div><span>운동화 타입</span></button>
+            <button class="step-option" data-value="active"><div class="option-icon">⚙️</div><span>운동화 ·<br>다이얼 타입</span></button>
           </div>
         </div>
+
+        <!-- 결과: 데모용 추천 (6개 분류 중 한 가지) -->
         <div class="step-result" style="display:none;">
           <div class="result-card">
             <div class="result-badge">당신을 위한 추천</div>
-            <h3 class="result-name">워키오 트라이솔 클래식</h3>
-            <div class="result-image"><div class="result-placeholder"><svg viewBox="0 0 200 120" fill="none"><rect width="200" height="120" rx="8" fill="#f5f0eb"/><path d="M40 85 C40 85 60 45 100 45 C140 45 160 85 160 85" stroke="#8B7355" stroke-width="3" fill="none"/><ellipse cx="100" cy="88" rx="65" ry="8" fill="#8B7355" opacity="0.15"/></svg></div></div>
-            <p class="result-desc">장시간 보행에도 편안한 5단 아치 서포트와 프리미엄 가죽의 조화.</p>
-            <div class="result-features"><span class="result-tag">5단 아치 서포트</span><span class="result-tag">프리미엄 가죽</span><span class="result-tag">의료기기 인증 인솔</span></div>
+            <h3 class="result-name" id="resultName">워키오 트라이솔 클래식 라인</h3>
+            <div class="result-image"><div class="result-placeholder"><svg viewBox="0 0 200 120" fill="none"><rect width="200" height="120" rx="8" fill="#DBEAFE"/><path d="M40 85 C40 85 60 45 100 45 C140 45 160 85 160 85" stroke="#1E40AF" stroke-width="3" fill="none"/><ellipse cx="100" cy="88" rx="65" ry="8" fill="#1E40AF" opacity="0.15"/></svg></div></div>
+            <p class="result-desc" id="resultDesc">장시간 보행에도 편안한 5단 아치 서포트와 프리미엄 가죽의 조화.</p>
+            <div class="result-features" id="resultTags"><span class="result-tag">5단 아치 서포트</span><span class="result-tag">프리미엄 가죽</span><span class="result-tag">의료기기 인증 인솔</span></div>
+            <p style="font-size:0.78rem;color:var(--color-text-light);margin-bottom:18px;">※ 추천 결과는 6가지 분류 라인 중 가장 적합한 한 라인입니다. 매장에서 풋스캐너로 정확한 사이즈를 확인해보세요.</p>
             <button class="result-cta" onclick="resetMyWokio()">다시 선택하기</button>
           </div>
         </div>
@@ -106,6 +113,11 @@
       <div class="footer-bottom"><p>&copy; 2026 WOKIO. All rights reserved.</p></div>
     </div>
   </footer>
+  <div class="floating-banner">
+    <a href="../store/index.html" class="fb-item" aria-label="매장 안내"><span class="fb-icon">📍</span><span>매장<br>안내</span></a>
+    <a href="../store/franchise.html" class="fb-item fb-brown" aria-label="가맹 문의"><span class="fb-icon">🤝</span><span>가맹<br>문의</span></a>
+    <a href="#" class="fb-item fb-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="맨 위로"><span class="fb-icon">↑</span><span>TOP</span></a>
+  </div>
   <script src="../script.js"></script>
 </body>
 </html>

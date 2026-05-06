@@ -2,15 +2,39 @@
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
-  --bg: #FDFBF8;
-  --text: #1a1a1a;
-  --text-light: #666;
-  --accent: #8B7355;
-  --accent-dark: #6B5640;
-  --warm: #F5F0EB;
-  --warm-dark: #E8E0D6;
+  /* === Color System ===
+     Main : White  | 2nd : Blue  | 3rd : Brown(point) */
+  --bg: #FFFFFF;
+  --bg-soft: #F8FAFC;
+  --text: #0F172A;
+  --text-light: #64748B;
+
+  /* Primary accent = Blue */
+  --accent: #1E40AF;
+  --accent-dark: #1E3A8A;
+  --accent-soft: #DBEAFE;
+
+  /* Tertiary point = Brown */
+  --brown: #8B7355;
+  --brown-dark: #6B5640;
+  --brown-soft: #F5F0EB;
+
+  --warm: #F1F5F9;
+  --warm-dark: #E2E8F0;
   --white: #fff;
-  --border: #e0d6cc;
+  --border: #E2E8F0;
+
+  /* sub.css 호환용 별칭 (--color- 접두사 사용 페이지를 위해) */
+  --color-bg: var(--bg);
+  --color-text: var(--text);
+  --color-text-light: var(--text-light);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-warm: var(--warm);
+  --color-white: var(--white);
+  --color-border: var(--border);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
   --font-display: 'Playfair Display', serif;
   --font-body: 'Noto Sans KR', sans-serif;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -95,11 +119,11 @@ img { max-width:100%; display:block; }
 .func-img-text { position:absolute; bottom:0; left:0; right:0; padding:36px; color:#fff; background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%); }
 .func-small { font-size:0.78rem; margin-bottom:6px; opacity:0.8; }
 .func-img-text h3 { font-size:1.4rem; font-weight:700; }
-.func-content-block { display:grid; grid-template-columns:1fr auto; background:#f8f6f3; }
+.func-content-block { display:grid; grid-template-columns:1fr auto; background:var(--bg-soft); }
 .func-content-inner { padding:48px 40px; display:flex; flex-direction:column; justify-content:center; }
 .func-eyebrow { font-size:0.85rem; color:var(--accent); font-weight:500; margin-bottom:16px; }
 .func-content-inner h3 { font-size:1.3rem; font-weight:400; line-height:1.6; margin-bottom:20px; }
-.func-content-inner h3 .accent { color:#4CAF50; font-weight:600; }
+.func-content-inner h3 .accent { color:var(--accent); font-weight:600; }
 .func-link { font-size:0.85rem; color:var(--text-light); border:1px solid var(--border); padding:10px 24px; display:inline-block; width:fit-content; transition:0.3s; }
 .func-link:hover { border-color:var(--text); color:var(--text); }
 .func-side-btns { display:flex; flex-direction:column; border-left:1px solid var(--border); }
@@ -124,7 +148,7 @@ img { max-width:100%; display:block; }
 .amb-subtext { font-family:var(--font-display); font-size:1rem; color:var(--text-light); margin-top:20px; letter-spacing:0.05em; opacity:0.5; }
 
 /* === 5. Reviews (Skechers Style) === */
-#reviews { padding:80px 0; background:#f5f5f5; text-align:center; }
+#reviews { padding:80px 0; background:var(--warm); text-align:center; }
 .review-title { font-size:1.4rem; font-weight:700; letter-spacing:0.08em; margin-bottom:40px; }
 .review-slider-wrap { display:flex; align-items:center; max-width:1100px; margin:0 auto; padding:0 20px; gap:16px; }
 .review-arrow { width:40px; height:40px; flex-shrink:0; border:1px solid #ccc; font-size:1rem; color:#999; display:flex; align-items:center; justify-content:center; transition:0.3s; background:#fff; }
@@ -142,7 +166,7 @@ img { max-width:100%; display:block; }
 .dot.active { background:#666; }
 
 /* === 6. My Wokio Banner === */
-#mywokio-banner { padding:100px 0; background:var(--warm); }
+#mywokio-banner { padding:100px 0; background:var(--accent-soft); }
 .mw-banner-inner { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
 .mw-banner-text .section-sub { font-family:var(--font-display); font-size:0.85rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
 .mw-banner-text h2 { font-size:2rem; font-weight:600; margin-bottom:16px; }
@@ -190,6 +214,31 @@ img { max-width:100%; display:block; }
 .footer-col a:hover { color:#fff; }
 .footer-bottom { padding-top:24px; text-align:center; }
 .footer-bottom p { font-size:0.72rem; opacity:0.4; }
+
+/* === Floating Banner === */
+.floating-banner {
+  position:fixed; right:24px; bottom:32px; z-index:900;
+  display:flex; flex-direction:column; gap:10px;
+}
+.fb-item {
+  width:68px; height:68px; border-radius:50%;
+  background:var(--accent); color:#fff;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  box-shadow:0 10px 28px rgba(30,64,175,0.32);
+  transition:0.3s var(--ease);
+  font-size:0.66rem; font-weight:600; line-height:1.2; text-align:center;
+}
+.fb-item:hover { transform:translateY(-4px); background:var(--accent-dark); box-shadow:0 14px 32px rgba(30,58,138,0.4); }
+.fb-item.fb-brown { background:var(--brown); box-shadow:0 10px 28px rgba(139,115,85,0.32); }
+.fb-item.fb-brown:hover { background:var(--brown-dark); box-shadow:0 14px 32px rgba(107,86,64,0.4); }
+.fb-item.fb-top { background:#fff; color:var(--text); border:1px solid var(--border); box-shadow:0 6px 18px rgba(15,23,42,0.08); }
+.fb-item.fb-top:hover { background:var(--text); color:#fff; }
+.fb-icon { font-size:1.25rem; margin-bottom:2px; }
+@media (max-width:768px) {
+  .floating-banner { right:14px; bottom:18px; gap:8px; }
+  .fb-item { width:56px; height:56px; font-size:0.6rem; }
+  .fb-icon { font-size:1.05rem; }
+}
 
 /* === Animations === */
 @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
