@@ -1,0 +1,10 @@
+# 통화 회의록 / 작업 노트 (공개 저장소에 노출 X)
+*.md
+*.MD
+!README.md
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
